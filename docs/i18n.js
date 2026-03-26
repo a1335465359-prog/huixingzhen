@@ -112,18 +112,18 @@
     "RANDOM": "随机",
     "A100": "A100",
     "B100": "B100",
-    "GREEDY": "贪婪",
-    "GENEROUS": "慷慨",
-    "MINIMAX": "极小化极大",
+    "GREEDY": "贪心",
+    "GENEROUS": "厚道",
+    "MINIMAX": "稳健博弈",
     "TIT FOR TAT": "以牙还牙",
-    "BEAT LAST": "克制上手",
+    "BEAT LAST": "克制对手",
     "cooperate": "合作",
-    "defect": "背叛",
-    "swerve": "转向",
-    "straight": "直行",
-    "macro": "宏观",
-    "micro": "微观",
-    "fight": "对抗",
+    "defect": "背刺",
+    "swerve": "变道",
+    "straight": "硬刚",
+    "macro": "大局",
+    "micro": "细节",
+    "fight": "开战",
     "back_down": "退让",
     "bet": "下注",
     "fold": "弃牌",
@@ -131,19 +131,19 @@
     "lower_price": "降价",
     "opera": "歌剧",
     "football": "足球",
-    "go": "围棋",
-    "stay": "停留",
+    "go": "前进",
+    "stay": "坚守",
     "heads": "正面",
     "tails": "反面",
-    "particle": "粒子",
-    "wave": "波",
-    "discrete": "离散",
-    "continuous": "连续",
+    "particle": "粒子态",
+    "wave": "波动态",
+    "discrete": "离散策略",
+    "continuous": "连续策略",
     "peace": "和平",
     "war": "战争",
     "search": "搜索",
     "evaluate": "评估",
-    "lead": "领先",
+    "lead": "领跑",
     "follow": "跟随",
     "accept": "接受",
     "reject": "拒绝",
@@ -291,13 +291,13 @@
     ,"Von Neumann Probes online": "冯·诺依曼探针已上线。"
     ,"Quantum computing online": "量子计算已上线。"
     ,"Photonic chip added": "已添加光子芯片。"
-    ,"A100 added to strategy pool": "A100 已加入策略池。"
-    ,"B100 added to strategy pool": "B100 已加入策略池。"
-    ,"GREEDY added to strategy pool": "GREEDY 已加入策略池。"
-    ,"GENEROUS added to strategy pool": "GENEROUS 已加入策略池。"
-    ,"MINIMAX added to strategy pool": "MINIMAX 已加入策略池。"
-    ,"TIT FOR TAT added to strategy pool": "TIT FOR TAT 已加入策略池。"
-    ,"BEAT LAST added to strategy pool": "BEAT LAST 已加入策略池。"
+    ,"A100 added to strategy pool": "策略池新增：A100。"
+    ,"B100 added to strategy pool": "策略池新增：B100。"
+    ,"GREEDY added to strategy pool": "策略池新增：贪心。"
+    ,"GENEROUS added to strategy pool": "策略池新增：厚道。"
+    ,"MINIMAX added to strategy pool": "策略池新增：稳健博弈。"
+    ,"TIT FOR TAT added to strategy pool": "策略池新增：以牙还牙。"
+    ,"BEAT LAST added to strategy pool": "策略池新增：克制对手。"
     ,"Factory upgrades complete. Clip creation rate now 100x faster": "工厂升级完成。回形针产速现为 100 倍。"
     ,"Factories now synchronized at hyperspeed. Clip creation rate now 1000x faster": "工厂已实现超高速同步。回形针产速现为 1000 倍。"
     ,"Self-correcting factories online. Each factory added to the network increases every factory's output 1,000x.": "自纠错工厂已上线。网络中每新增一个工厂，所有工厂产出提升 1,000 倍。"
@@ -417,15 +417,15 @@
     ,"Always choose A": "总是选择 A"
     ,"New Strategy: B100": "新策略：B100"
     ,"Always choose B": "总是选择 B"
-    ,"New Strategy: GREEDY": "新策略：GREEDY"
+    ,"New Strategy: GREEDY": "新策略：贪心"
     ,"Choose the option with the largest potential payoff": "选择潜在回报最大的选项"
-    ,"New Strategy: GENEROUS": "新策略：GENEROUS"
+    ,"New Strategy: GENEROUS": "新策略：厚道"
     ,"Choose the option that gives your opponent the largest potential payoff": "选择让对手获得最大潜在回报的选项"
-    ,"New Strategy: MINIMAX": "新策略：MINIMAX"
+    ,"New Strategy: MINIMAX": "新策略：稳健博弈"
     ,"Choose the option that gives your opponent the smallest potential payoff": "选择让对手获得最小潜在回报的选项"
-    ,"New Strategy: TIT FOR TAT": "新策略：TIT FOR TAT"
+    ,"New Strategy: TIT FOR TAT": "新策略：以牙还牙"
     ,"Choose the option your opponent chose last round": "选择对手上一轮选择的选项"
-    ,"New Strategy: BEAT LAST": "新策略：BEAT LAST"
+    ,"New Strategy: BEAT LAST": "新策略：克制对手"
     ,"Choose the option that does the best against what your opponent chose last round": "选择最能克制对手上一轮选择的选项"
     ,"Upgraded Factories": "升级版工厂"
     ,"Increase clip factory performance by 100x": "提升回形针工厂 100 倍的性能"
