@@ -853,3 +853,252 @@ body.excel-body {
 .button2:hover {
     background: #eef4ff;
 }
+
+/* PR-1: sheet coordinate shell */
+.sheetFrame {
+    display: grid;
+    grid-template-columns: 40px 1fr;
+    grid-template-rows: 30px 1fr;
+    height: calc(100vh - 120px);
+    border: 1px solid #cfd3d8;
+    background: #fff;
+}
+
+.sheetCorner {
+    grid-column: 1;
+    grid-row: 1;
+    background: #eceff1;
+    border-right: 1px solid #d2d7dc;
+    border-bottom: 1px solid #d2d7dc;
+}
+
+.sheetColumnHeaders {
+    grid-column: 2;
+    grid-row: 1;
+    display: grid;
+    grid-template-columns: repeat(14, minmax(80px, 1fr));
+    background: #eceff1;
+    border-bottom: 1px solid #d2d7dc;
+}
+
+.sheetColumnHeaders span {
+    text-align: center;
+    line-height: 30px;
+    font-size: 12px;
+    color: #4b5563;
+    border-right: 1px solid #e0e3e6;
+}
+
+.sheetRowHeaders {
+    grid-column: 1;
+    grid-row: 2;
+    display: grid;
+    grid-template-rows: repeat(30, 24px);
+    background: #eceff1;
+    border-right: 1px solid #d2d7dc;
+}
+
+.sheetRowHeaders span {
+    text-align: center;
+    line-height: 24px;
+    font-size: 11px;
+    color: #4b5563;
+    border-bottom: 1px solid #e0e3e6;
+}
+
+.sheetViewport {
+    grid-column: 2;
+    grid-row: 2;
+    overflow: auto;
+    position: relative;
+}
+
+.sheetViewport #page {
+    margin: 0;
+    min-width: 1280px;
+}
+
+/* PR-2: WPS-like chrome refinement (UI only) */
+#excelChrome {
+    position: sticky;
+    top: 0;
+    z-index: 40;
+    border-bottom: 1px solid #cfd3d8;
+    background: #f7f8fa;
+}
+
+.wps-titlebar {
+    height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #d7dbe0;
+    padding: 0 10px;
+    background: #f3f4f6;
+    font-size: 13px;
+}
+
+.wps-app { color: #1f2937; font-weight: 500; }
+
+.wps-filetabs {
+    display: flex;
+    gap: 6px;
+    flex: 1;
+    margin: 0 12px;
+    overflow: hidden;
+}
+
+.wps-filetabs .tab {
+    background: #e5e7eb;
+    border-radius: 4px 4px 0 0;
+    padding: 3px 10px;
+    color: #374151;
+    white-space: nowrap;
+}
+
+.wps-filetabs .tab.active {
+    background: #22a062;
+    color: #fff;
+}
+
+.wps-windowbtns { color: #6b7280; letter-spacing: 4px; }
+
+.wps-menubar {
+    height: 32px;
+    line-height: 32px;
+    padding: 0 12px;
+    font-size: 15px;
+    border-bottom: 1px solid #dfe3e7;
+    background: #f8fafc;
+}
+
+.wps-ribbon {
+    height: 62px;
+    border-bottom: 1px solid #dfe3e7;
+    background: #f8fafc;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 0 10px;
+    font-size: 13px;
+    color: #374151;
+}
+
+.wps-ribbon .group {
+    padding-right: 14px;
+    border-right: 1px solid #e2e8f0;
+    white-space: nowrap;
+}
+
+.excel-formula {
+    height: 34px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 0 8px;
+    border-bottom: 1px solid #dfe3e7;
+    background: #f9fafb;
+}
+
+.name-box {
+    width: 70px;
+    height: 24px;
+    line-height: 24px;
+    text-align: center;
+    border: 1px solid #cdd4dc;
+    background: #fff;
+    color: #334155;
+    font-size: 12px;
+}
+
+.fx-label {
+    color: #6b7280;
+    font-style: italic;
+    font-size: 16px;
+}
+
+.formula-input {
+    flex: 1;
+    height: 24px;
+    border: 1px solid #cdd4dc;
+    background: #fff;
+    display: inline-block;
+}
+
+#excelGridWrap {
+    min-height: calc(100vh - 178px);
+    padding: 0;
+    background: #fff;
+}
+
+.sheetFrame {
+    height: calc(100vh - 230px);
+    border: 0;
+}
+
+.sheetColumnHeaders {
+    grid-template-columns: repeat(25, minmax(52px, 1fr));
+}
+
+.sheetColumnHeaders span,
+.sheetRowHeaders span {
+    background: #f3f4f6;
+}
+
+.sheetColumnHeaders span.selected-col {
+    border-bottom: 2px solid #1a9c52;
+    color: #0f766e;
+    font-weight: 700;
+}
+
+.sheetRowHeaders {
+    grid-template-rows: repeat(43, 24px);
+}
+
+.sheetViewport {
+    background-image: linear-gradient(#e5e7eb 1px, transparent 1px), linear-gradient(90deg, #e5e7eb 1px, transparent 1px);
+    background-size: 100% 24px, 52px 100%;
+    background-color: #fff;
+}
+
+.sheetViewport #page {
+    min-width: 1450px;
+    background: transparent;
+    border: 0;
+    box-shadow: none;
+}
+
+.sheetBottomBar,
+.sheetStatusBar {
+    height: 28px;
+    border-top: 1px solid #d1d5db;
+    background: #f3f4f6;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+    color: #4b5563;
+    font-size: 12px;
+}
+
+.sheetTabs .active {
+    color: #0f766e;
+    font-weight: 700;
+}
+
+.sheetScrollTrack {
+    width: 45%;
+    height: 10px;
+    background: #e5e7eb;
+    border-radius: 8px;
+    position: relative;
+}
+
+.sheetScrollTrack .thumb {
+    position: absolute;
+    left: 35%;
+    width: 28%;
+    height: 10px;
+    border-radius: 8px;
+    background: #9ca3af;
+}
