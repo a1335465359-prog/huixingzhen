@@ -853,3 +853,67 @@ body.excel-body {
 .button2:hover {
     background: #eef4ff;
 }
+
+/* PR-1: sheet coordinate shell */
+.sheetFrame {
+    display: grid;
+    grid-template-columns: 40px 1fr;
+    grid-template-rows: 30px 1fr;
+    height: calc(100vh - 120px);
+    border: 1px solid #cfd3d8;
+    background: #fff;
+}
+
+.sheetCorner {
+    grid-column: 1;
+    grid-row: 1;
+    background: #eceff1;
+    border-right: 1px solid #d2d7dc;
+    border-bottom: 1px solid #d2d7dc;
+}
+
+.sheetColumnHeaders {
+    grid-column: 2;
+    grid-row: 1;
+    display: grid;
+    grid-template-columns: repeat(14, minmax(80px, 1fr));
+    background: #eceff1;
+    border-bottom: 1px solid #d2d7dc;
+}
+
+.sheetColumnHeaders span {
+    text-align: center;
+    line-height: 30px;
+    font-size: 12px;
+    color: #4b5563;
+    border-right: 1px solid #e0e3e6;
+}
+
+.sheetRowHeaders {
+    grid-column: 1;
+    grid-row: 2;
+    display: grid;
+    grid-template-rows: repeat(30, 24px);
+    background: #eceff1;
+    border-right: 1px solid #d2d7dc;
+}
+
+.sheetRowHeaders span {
+    text-align: center;
+    line-height: 24px;
+    font-size: 11px;
+    color: #4b5563;
+    border-bottom: 1px solid #e0e3e6;
+}
+
+.sheetViewport {
+    grid-column: 2;
+    grid-row: 2;
+    overflow: auto;
+    position: relative;
+}
+
+.sheetViewport #page {
+    margin: 0;
+    min-width: 1280px;
+}
