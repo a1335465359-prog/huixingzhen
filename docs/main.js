@@ -1251,8 +1251,8 @@ function pickStrats(roundNum) {
     strats[h].currentPos = 1;
     strats[v].currentPos = 2;
     
-    document.getElementById("vertStrat").innerHTML = vStrat.name;
-    document.getElementById("horizStrat").innerHTML = hStrat.name;
+    document.getElementById("vertStrat").innerHTML = localizeText(vStrat.name);
+    document.getElementById("horizStrat").innerHTML = localizeText(hStrat.name);
     
 }
 
@@ -1476,7 +1476,7 @@ function populateTourneyReport(){
     
         for(i=0; i<results.length; i++){
             
-        document.getElementById("results"+i).innerHTML=(i+1)+". "+results[i].name+": "+results[i].currentScore; 
+        document.getElementById("results"+i).innerHTML=(i+1)+". "+localizeText(results[i].name)+": "+results[i].currentScore; 
             
         if (pick<10){    
             
@@ -1506,7 +1506,7 @@ function displayTourneyReport(){
 }
 
 function tourneyReport($){
-    document.getElementById("tourneyDisplay").innerHTML = $;
+    document.getElementById("tourneyDisplay").innerHTML = localizeText($);
 }
 
 function revealGrid(){
