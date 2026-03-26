@@ -2543,82 +2543,52 @@ function calculateCreativity(number){
 }
 
 function resetPrestige(){
-    
-    prestigeU = 0;
-    prestigeS = 0;
-    
-    localStorage.removeItem("savePrestige");
-    
+    displayMessage("此镜像版本已禁用作弊/调试功能。");
 }
 
 function cheatPrestigeU(){
-    
-        prestigeU++;
-        var savePrestige = {
-        prestigeU: prestigeU,
-        prestigeS: prestigeS,
-        }
-        localStorage.setItem("savePrestige",JSON.stringify(savePrestige));
-    
+    displayMessage("此镜像版本已禁用作弊/调试功能。");
 }
 
 function cheatPrestigeS(){
-    
-        prestigeS++;
-        var savePrestige = {
-        prestigeU: prestigeU,
-        prestigeS: prestigeS,
-        }
-        localStorage.setItem("savePrestige",JSON.stringify(savePrestige));
-    
+    displayMessage("此镜像版本已禁用作弊/调试功能。");
 }
 
 function setB(){
-    battleNumbers[1] = 7;
+    displayMessage("此镜像版本已禁用作弊/调试功能。");
 }
 
 function cheatClips(){
-    clips = clips + 100000000;
-    unusedClips = unusedClips + 100000000;
-    displayMessage("you just cheated");
-    }
+    displayMessage("此镜像版本已禁用作弊/调试功能。");
+}
 
 function cheatMoney(){
-    funds = funds + 10000000;
-    document.getElementById("funds").innerHTML = funds.toFixed(2);
-    displayMessage("LIZA just cheated");
-    }
+    displayMessage("此镜像版本已禁用作弊/调试功能。");
+}
 
 function cheatTrust(){
-    trust = trust+1;
-    displayMessage("Hilary is nice. Also, Liza just cheated");
-    }
+    displayMessage("此镜像版本已禁用作弊/调试功能。");
+}
 
 function cheatOps(){
-    standardOps = standardOps + 10000;
-    displayMessage("you just cheated, Liza");
-    }
+    displayMessage("此镜像版本已禁用作弊/调试功能。");
+}
 
 function cheatCreat(){
-    creativityOn = 1;
-    creativity = creativity + 1000;
-    displayMessage("Liza just cheated. Very creative!");
-    }
+    displayMessage("此镜像版本已禁用作弊/调试功能。");
+}
 
 function cheatYomi(){
-    yomi = yomi + 1000000;
-    document.getElementById("yomiDisplay").innerHTML = yomi.toLocaleString();
-    displayMessage("you just cheated");
-    }
+    displayMessage("此镜像版本已禁用作弊/调试功能。");
+}
 
 function cheatHypno(){
-    hypnoDroneEvent();
-    }
+    displayMessage("此镜像版本已禁用作弊/调试功能。");
+}
 
 function zeroMatter(){
-    availableMatter = 0;
-    displayMessage("you just cheated");
-    }
+    displayMessage("此镜像版本已禁用作弊/调试功能。");
+}
     
 
 function calculateTrust(){
