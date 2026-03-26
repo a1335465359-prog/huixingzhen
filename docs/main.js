@@ -388,8 +388,20 @@ if (resultsFlag == 1 && autoTourneyFlag == 1 && autoTourneyStatus ==1 && documen
     }    
     
     
-document.getElementById("tournamentStuff").onmouseenter = function() {revealGrid()};
-document.getElementById("tournamentStuff").onmouseleave = function() {revealResults()};    
+document.getElementById("tournamentStuff").onmouseenter = function() {
+    if (tourneyHoverTimer) {
+        clearTimeout(tourneyHoverTimer);
+        tourneyHoverTimer = 0;
+    }
+    revealGrid();
+};
+document.getElementById("tournamentStuff").onmouseleave = function() {
+    if (tourneyHoverTimer) clearTimeout(tourneyHoverTimer);
+    tourneyHoverTimer = setTimeout(function(){
+        revealResults();
+        tourneyHoverTimer = 0;
+    }, 80);
+};    
     
 if (project121.flag == 0){
         document.getElementById("increaseMaxTrustDiv").style.display="none";
@@ -1035,6 +1047,7 @@ var strats = [];
 var resultsTimer = 0;
 var results = [];
 var resultsFlag = 0;
+var tourneyHoverTimer = 0;
 
 
 var payoffGrid = {
@@ -1506,7 +1519,7 @@ function displayTourneyReport(){
 }
 
 function tourneyReport($){
-    document.getElementById("tourneyDisplay").innerHTML = localizeMessage($);
+    document.getElementById("tourneyDisplay").innerHTML = localizeText(localizeMessage($));
 }
 
 function revealGrid(){
