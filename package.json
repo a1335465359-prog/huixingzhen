@@ -2,6 +2,11 @@
   "name": "universal-paperclips-excel",
   "version": "1.0.0",
   "scripts": {
-    "build": "mkdir -p dist && cp -r docs/* dist/ && cp docs/index2.html dist/index.html"
+    "dev": "node server.js",
+    "start": "node server.js",
+    "build": "mkdir -p public && cp -r docs/* public/ && cp docs/index2.html public/index.html"
+  },
+  "dependencies": {
+    "express": "^4.21.2"
   }
 }
