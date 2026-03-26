@@ -388,8 +388,8 @@ if (resultsFlag == 1 && autoTourneyFlag == 1 && autoTourneyStatus ==1 && documen
     }    
     
     
-document.getElementById("tournamentStuff").onmouseover = function() {revealGrid()};
-document.getElementById("tournamentStuff").onmouseout = function() {revealResults()};    
+document.getElementById("tournamentStuff").onmouseenter = function() {revealGrid()};
+document.getElementById("tournamentStuff").onmouseleave = function() {revealResults()};    
     
 if (project121.flag == 0){
         document.getElementById("increaseMaxTrustDiv").style.display="none";
@@ -1251,8 +1251,8 @@ function pickStrats(roundNum) {
     strats[h].currentPos = 1;
     strats[v].currentPos = 2;
     
-    document.getElementById("vertStrat").innerHTML = vStrat.name;
-    document.getElementById("horizStrat").innerHTML = hStrat.name;
+    document.getElementById("vertStrat").innerHTML = localizeText(vStrat.name);
+    document.getElementById("horizStrat").innerHTML = localizeText(hStrat.name);
     
 }
 
@@ -1476,7 +1476,7 @@ function populateTourneyReport(){
     
         for(i=0; i<results.length; i++){
             
-        document.getElementById("results"+i).innerHTML=(i+1)+". "+results[i].name+": "+results[i].currentScore; 
+        document.getElementById("results"+i).innerHTML=(i+1)+". "+localizeText(results[i].name)+": "+results[i].currentScore; 
             
         if (pick<10){    
             
@@ -1506,7 +1506,7 @@ function displayTourneyReport(){
 }
 
 function tourneyReport($){
-    document.getElementById("tourneyDisplay").innerHTML = $;
+    document.getElementById("tourneyDisplay").innerHTML = localizeMessage($);
 }
 
 function revealGrid(){
@@ -4604,7 +4604,7 @@ function load() {
         
             var stratList = document.getElementById("stratPicker");
             var el = document.createElement("option");
-            el.textContent = strats[i].name;
+            el.textContent = localizeText(strats[i].name);
             el.value = i;
             stratList.appendChild(el);
             
@@ -4930,7 +4930,7 @@ function load1() {
         
             var stratList = document.getElementById("stratPicker");
             var el = document.createElement("option");
-            el.textContent = strats[i].name;
+            el.textContent = localizeText(strats[i].name);
             el.value = i;
             stratList.appendChild(el);
             
@@ -5235,7 +5235,7 @@ function load2() {
         
             var stratList = document.getElementById("stratPicker");
             var el = document.createElement("option");
-            el.textContent = strats[i].name;
+            el.textContent = localizeText(strats[i].name);
             el.value = i;
             stratList.appendChild(el);
             
