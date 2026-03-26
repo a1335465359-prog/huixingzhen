@@ -3,7 +3,25 @@
         <link rel="stylesheet" type="text/css" href="interface.css" />
     </head>
     
-    <body>
+    <body class="excel-body">
+        <div id="excelChrome">
+            <div class="excel-titlebar">Excel - 宇宙回形针</div>
+            <div class="excel-ribbon">文件　开始　插入　页面布局　公式　数据　审阅　视图</div>
+            <div class="excel-formula">fx</div>
+        </div>
+        <div id="excelGridWrap">
+        <div class="sheetFrame">
+            <div class="sheetCorner"></div>
+            <div class="sheetColumnHeaders">
+                <span>A</span><span>B</span><span>C</span><span>D</span><span>E</span><span>F</span><span>G</span>
+                <span>H</span><span>I</span><span>J</span><span>K</span><span>L</span><span>M</span><span>N</span>
+            </div>
+            <div class="sheetRowHeaders">
+                <span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span><span>10</span>
+                <span>11</span><span>12</span><span>13</span><span>14</span><span>15</span><span>16</span><span>17</span><span>18</span><span>19</span><span>20</span>
+                <span>21</span><span>22</span><span>23</span><span>24</span><span>25</span><span>26</span><span>27</span><span>28</span><span>29</span><span>30</span>
+            </div>
+            <div class="sheetViewport">
         
 <!--     <audio id="threnody1">
         <source src="test.mp3" type="audio/mpeg">
@@ -299,20 +317,6 @@
         <button id ="save2Button" onclick="save2()">SAVE SLOT 2</button>
         <button id ="load2Button" onclick="load2()">LOAD SLOT 2</button><br />    
         <button id ="resetButton" onclick="reset()">RESET ALL PROGRESS</button><br />       
-
-        <button id ="freeClipsButton" onclick="cheatClips()">Free Clips</button><br />    
-        <button id ="freeMoneyButton" onclick="cheatMoney()">Free Money</button><br />
-        <button id ="freeTrustButton" onclick="cheatTrust()">Free Trust</button><br />        
-        <button id ="freeOpsButton" onclick="cheatOps()">Free Ops</button><br />
-        <button id ="freeCreatButton" onclick="cheatCreat()">Free Creativity</button><br />
-        <button id ="freeYomiButton" onclick="cheatYomi()">Free Yomi</button><br />    
-        <button id ="resetPrestige" onclick="resetPrestige()">Reset Prestige</button><br />     
-            
-        <button id ="destroyAllHumansButton" onclick="cheatHypno()">Destroy all Humans</button><br />    
-        <button id ="freePrestigeU" onclick="cheatPrestigeU()">Free Prestige U</button>
-        <button id ="freePrestigeS" onclick="cheatPrestigeS()">Free Prestige S</button>
-        <button id ="debugBattleNumbers" onclick="setB()">Set Battle Number 1 to 7</button><br /> 
-        <button id ="availMatterZero" onclick="zeroMatter()">Set Avail Matter to 0</button><br />     
 
 
 
@@ -898,6 +902,10 @@
             
             
         </div>
+        </div>
+        </div>
+        </div>
+        <script type="text/javascript" src="i18n.js?v1"></script>
         <script type="text/javascript" src="combat.js?v2"></script>     
         <script type="text/javascript" src="globals.js?v2"></script>      
         <script type="text/javascript" src="projects.js?v2"></script>   
