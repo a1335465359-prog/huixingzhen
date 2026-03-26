@@ -4,11 +4,7 @@
   "rewrites": [
     {
       "source": "/",
-      "destination": "/docs/index.html"
-    },
-    {
-      "source": "/(.*)",
-      "destination": "/docs/$1"
+      "destination": "/index2.html"
     }
   ]
 }
