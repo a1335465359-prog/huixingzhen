@@ -787,3 +787,69 @@ p.hypnoDrone {
    border: 1px solid #ffffff;
 }
 
+
+/* Excel skin */
+body.excel-body {
+    margin: 0;
+    background: #f3f3f3;
+    font-family: "Microsoft YaHei", "PingFang SC", "Noto Sans SC", Arial, sans-serif;
+}
+
+#excelChrome {
+    position: sticky;
+    top: 0;
+    z-index: 30;
+    border-bottom: 1px solid #cfd3d8;
+    background: #f7f7f7;
+}
+
+.excel-titlebar {
+    height: 34px;
+    line-height: 34px;
+    padding: 0 14px;
+    font-size: 13px;
+    background: #e9ecef;
+    color: #1f2937;
+}
+
+.excel-ribbon {
+    height: 38px;
+    line-height: 38px;
+    padding: 0 14px;
+    font-size: 14px;
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #d9d9d9;
+}
+
+.excel-formula {
+    height: 30px;
+    line-height: 30px;
+    padding: 0 14px;
+    font-size: 12px;
+    color: #6b7280;
+    border-top: 1px solid #eee;
+    background: #fff;
+}
+
+#excelGridWrap {
+    min-height: calc(100vh - 102px);
+    background-image: linear-gradient(#e6e9ed 1px, transparent 1px), linear-gradient(90deg, #e6e9ed 1px, transparent 1px);
+    background-size: 26px 26px, 80px 26px;
+    padding: 8px;
+}
+
+#page {
+    position: relative;
+    background: rgba(255,255,255,0.92);
+    border: 1px solid #cdd3d8;
+    box-shadow: 0 2px 8px rgba(0,0,0,.08);
+}
+
+.button2 {
+    border: 1px solid #9ca3af;
+    background: #f9fafb;
+}
+
+.button2:hover {
+    background: #eef4ff;
+}
