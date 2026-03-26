@@ -110,6 +110,13 @@
     "Strategic Modeling": "策略建模",
     "Pick a Strat": "选择策略",
     "RANDOM": "随机",
+    "A100": "A100",
+    "B100": "B100",
+    "GREEDY": "贪婪",
+    "GENEROUS": "慷慨",
+    "MINIMAX": "极小化极大",
+    "TIT FOR TAT": "以牙还牙",
+    "BEAT LAST": "克制上手",
     "cooperate": "合作",
     "defect": "背叛",
     "swerve": "转向",
@@ -532,6 +539,7 @@
     s = s.replace(/^Using quantum foam annealment we now get (.*) supply from every spool$/, "采用量子泡沫退火后，每卷线材供应量提升为 $1");
     s = s.replace(/^Universal Paperclips achieved in (.+)$/, "在 $1 内达成“宇宙回形针”。");
     s = s.replace(/^Terrestrial resources fully utilized in (.+)$/, "在 $1 内完全利用地球资源。");
+    s = s.replace(/^Round (\d+)$/, "第 $1 回合");
     s = s.replace(/^(.+) scored (.+) in the tournament. Yomi increased by (.+)$/, "$1 在本次锦标赛中得到 $2 分。Yomi 增加 $3");
     
     // Dynamic project translations

@@ -388,8 +388,8 @@ if (resultsFlag == 1 && autoTourneyFlag == 1 && autoTourneyStatus ==1 && documen
     }    
     
     
-document.getElementById("tournamentStuff").onmouseover = function() {revealGrid()};
-document.getElementById("tournamentStuff").onmouseout = function() {revealResults()};    
+document.getElementById("tournamentStuff").onmouseenter = function() {revealGrid()};
+document.getElementById("tournamentStuff").onmouseleave = function() {revealResults()};    
     
 if (project121.flag == 0){
         document.getElementById("increaseMaxTrustDiv").style.display="none";
@@ -1506,7 +1506,7 @@ function displayTourneyReport(){
 }
 
 function tourneyReport($){
-    document.getElementById("tourneyDisplay").innerHTML = localizeText($);
+    document.getElementById("tourneyDisplay").innerHTML = localizeMessage($);
 }
 
 function revealGrid(){
@@ -4604,7 +4604,7 @@ function load() {
         
             var stratList = document.getElementById("stratPicker");
             var el = document.createElement("option");
-            el.textContent = strats[i].name;
+            el.textContent = localizeText(strats[i].name);
             el.value = i;
             stratList.appendChild(el);
             
@@ -4930,7 +4930,7 @@ function load1() {
         
             var stratList = document.getElementById("stratPicker");
             var el = document.createElement("option");
-            el.textContent = strats[i].name;
+            el.textContent = localizeText(strats[i].name);
             el.value = i;
             stratList.appendChild(el);
             
@@ -5235,7 +5235,7 @@ function load2() {
         
             var stratList = document.getElementById("stratPicker");
             var el = document.createElement("option");
-            el.textContent = strats[i].name;
+            el.textContent = localizeText(strats[i].name);
             el.value = i;
             stratList.appendChild(el);
             
