@@ -40,10 +40,10 @@ function adjustWirePrice(){
 function toggleWireBuyer(){
     if (wireBuyerStatus==1){
         wireBuyerStatus=0;
-        document.getElementById('wireBuyerStatus').innerHTML = "OFF";
+        document.getElementById('wireBuyerStatus').innerHTML = localizeText("OFF");
     } else {
         wireBuyerStatus=1;
-        document.getElementById('wireBuyerStatus').innerHTML = "ON";
+        document.getElementById('wireBuyerStatus').innerHTML = localizeText("ON");
     }
 }
 
@@ -159,7 +159,7 @@ function qComp(){
     
     
     if (qChips[0].active == 0){
-        document.getElementById("qCompDisplay").innerHTML = "Need Photonic Chips";   
+        document.getElementById("qCompDisplay").innerHTML = localizeText("Need Photonic Chips");   
     } else {
     for (var i = 0; i<qChips.length; i++){
         q = q+qChips[i].value;
@@ -177,7 +177,7 @@ function qComp(){
             }
         
         standardOps = standardOps + qq;
-        document.getElementById("qCompDisplay").innerHTML = "qOps: " + Math.ceil(q*360).toLocaleString();
+        document.getElementById("qCompDisplay").innerHTML = localizeMessage("qOps: " + Math.ceil(q*360).toLocaleString());
     }
     
 }
@@ -219,16 +219,16 @@ function displayProjects(project){
     span.style.fontWeight = "bold";
     newProject.appendChild(span);
     
-    var title = document.createTextNode(project.title);
+    var title = document.createTextNode(localizeMessage(project.title));
     span.appendChild(title);    
     
-    var cost = document.createTextNode(project.priceTag);
+    var cost = document.createTextNode(localizeMessage(project.priceTag));
     newProject.appendChild(cost);
     
     var div = document.createElement("div");
     newProject.appendChild(div);
     
-    var description = document.createTextNode(project.description);
+    var description = document.createTextNode(localizeMessage(project.description));
     newProject.appendChild(description);
     
     blink(project.id);
@@ -251,19 +251,19 @@ function longBlink(elemID){
     longBlinkCounter++;    
         
     if (longBlinkCounter > 5 && longBlinkCounter < 10){
-        document.getElementById("hypnoDroneText").innerHTML="Release"; 
+        document.getElementById("hypnoDroneText").innerHTML=localizeText("Release"); 
         }    
     
     if (longBlinkCounter > 30 && longBlinkCounter < 40){
-        document.getElementById("hypnoDroneText").innerHTML="<br /><br /><br />Release"; 
+        document.getElementById("hypnoDroneText").innerHTML="<br /><br /><br />"+localizeText("Release"); 
         }   
         
     if (longBlinkCounter > 45 && longBlinkCounter < 55){
-        document.getElementById("hypnoDroneText").innerHTML="<br />Release";
+        document.getElementById("hypnoDroneText").innerHTML="<br />"+localizeText("Release");
         }       
         
      if (longBlinkCounter > 55){
-        document.getElementById("hypnoDroneText").innerHTML="Release<br/>the<br/>Hypno<br/>Drones";
+        document.getElementById("hypnoDroneText").innerHTML=localizeText("Release")+"<br/>催眠<br/>无人机";
         }       
         
     if (longBlinkCounter >= 120){
@@ -283,7 +283,7 @@ function longBlink(elemID){
     }
 
 function hypnoDroneEvent(){
-    document.getElementById("hypnoDroneText").innerHTML="Release";
+    document.getElementById("hypnoDroneText").innerHTML=localizeText("Release");
     longBlink("hypnoDroneEventDiv");
 }     
 
@@ -292,6 +292,9 @@ function hypnoDroneEvent(){
 
 
 function displayMessage(msg){
+    if (typeof localizeMessage === "function") {
+        msg = localizeMessage(msg);
+    }
     document.getElementById("readout5").innerHTML=document.getElementById("readout4").innerHTML;
     document.getElementById("readout4").innerHTML=document.getElementById("readout3").innerHTML;
     document.getElementById("readout3").innerHTML=document.getElementById("readout2").innerHTML;
@@ -1285,10 +1288,10 @@ function generateGrid(){
 function toggleAutoTourney(){
     if (autoTourneyStatus==1){
         autoTourneyStatus=0;
-        document.getElementById('autoTourneyStatus').innerHTML = "OFF";
+        document.getElementById('autoTourneyStatus').innerHTML = localizeText("OFF");
     } else {
         autoTourneyStatus=1;
-        document.getElementById('autoTourneyStatus').innerHTML = "ON";
+        document.getElementById('autoTourneyStatus').innerHTML = localizeText("ON");
     }
 }
 
@@ -1317,7 +1320,7 @@ function newTourney(){
     document.getElementById("vertStrat").innerHTML = "&nbsp";
     document.getElementById("horizStrat").innerHTML = "&nbsp";
     
-    document.getElementById("tourneyDisplay").innerHTML = "Pick strategy, run tournament, gain yomi";
+    document.getElementById("tourneyDisplay").innerHTML = localizeText("Pick strategy, run tournament, gain yomi");
     
     
 }
@@ -2051,7 +2054,7 @@ function updateSwarm(){
         giftBits = giftBits + giftBitGenerationRate;
         giftCountdown = (giftPeriod - giftBits) / giftBitGenerationRate;
 
-        document.getElementById("swarmStatus").innerHTML="Active";
+        document.getElementById("swarmStatus").innerHTML=localizeText("Active");
         document.getElementById("giftCountdown").innerHTML= timeCruncher(giftCountdown);
         document.getElementById("giftTimer").style.display=""; 
         } else {
@@ -2059,14 +2062,14 @@ function updateSwarm(){
         }
     
     if (swarmStatus == 1){
-        document.getElementById("swarmStatus").innerHTML="Hungry";
+        document.getElementById("swarmStatus").innerHTML=localizeText("Hungry");
         document.getElementById("feedButtonDiv").style.display="";
         } else {
         document.getElementById("feedButtonDiv").style.display="none";    
         }
     
      if (swarmStatus == 2){
-        document.getElementById("swarmStatus").innerHTML="Confused";
+        document.getElementById("swarmStatus").innerHTML=localizeText("Confused");
         document.getElementById("teachButtonDiv").style.display="";
         } else {
         document.getElementById("teachButtonDiv").style.display="none";    
@@ -2074,28 +2077,28 @@ function updateSwarm(){
     
      if (swarmStatus == 3){
         document.getElementById("swarmEntertainCost").innerHTML=entertainCost.toLocaleString(); 
-        document.getElementById("swarmStatus").innerHTML="Bored";
+        document.getElementById("swarmStatus").innerHTML=localizeText("Bored");
         document.getElementById("entertainButtonDiv").style.display="";
         } else {
         document.getElementById("entertainButtonDiv").style.display="none";    
         } 
     
      if (swarmStatus == 4){
-        document.getElementById("swarmStatus").innerHTML="Cold";
+        document.getElementById("swarmStatus").innerHTML=localizeText("Cold");
         document.getElementById("cladButtonDiv").style.display="";
         } else {
         document.getElementById("cladButtonDiv").style.display="none";    
         }  
     
      if (swarmStatus == 5){
-        document.getElementById("swarmStatus").innerHTML="Disorganized";
+        document.getElementById("swarmStatus").innerHTML=localizeText("Disorganized");
         document.getElementById("synchButtonDiv").style.display="";
         } else {
         document.getElementById("synchButtonDiv").style.display="none";    
         }     
     
        if (swarmStatus == 6){
-        document.getElementById("swarmStatus").innerHTML="Sleeping";
+        document.getElementById("swarmStatus").innerHTML=localizeText("Sleeping");
         } 
     
        if (swarmStatus == 7){
@@ -2105,11 +2108,11 @@ function updateSwarm(){
         }    
     
         if (swarmStatus == 8){
-        document.getElementById("swarmStatus").innerHTML="Lonely";
+        document.getElementById("swarmStatus").innerHTML=localizeText("Lonely");
         }   
     
         if (swarmStatus == 9){
-        document.getElementById("swarmStatus").innerHTML="NO RESPONSE...";
+        document.getElementById("swarmStatus").innerHTML=localizeText("NO RESPONSE...");
         }  
     
     if (swarmFlag == 0){        
@@ -2403,9 +2406,9 @@ function lowerPrice(){
 function updateStats(){
     
     if (wire == 1){
-        document.getElementById("inchSpan").innerHTML = "inch";
+        document.getElementById("inchSpan").innerHTML = localizeText("inch");
     } else {
-        document.getElementById("inchSpan").innerHTML = "inches";
+        document.getElementById("inchSpan").innerHTML = localizeText("inches");
     }
     
     
@@ -2540,82 +2543,52 @@ function calculateCreativity(number){
 }
 
 function resetPrestige(){
-    
-    prestigeU = 0;
-    prestigeS = 0;
-    
-    localStorage.removeItem("savePrestige");
-    
+    displayMessage("此镜像版本已禁用作弊/调试功能。");
 }
 
 function cheatPrestigeU(){
-    
-        prestigeU++;
-        var savePrestige = {
-        prestigeU: prestigeU,
-        prestigeS: prestigeS,
-        }
-        localStorage.setItem("savePrestige",JSON.stringify(savePrestige));
-    
+    displayMessage("此镜像版本已禁用作弊/调试功能。");
 }
 
 function cheatPrestigeS(){
-    
-        prestigeS++;
-        var savePrestige = {
-        prestigeU: prestigeU,
-        prestigeS: prestigeS,
-        }
-        localStorage.setItem("savePrestige",JSON.stringify(savePrestige));
-    
+    displayMessage("此镜像版本已禁用作弊/调试功能。");
 }
 
 function setB(){
-    battleNumbers[1] = 7;
+    displayMessage("此镜像版本已禁用作弊/调试功能。");
 }
 
 function cheatClips(){
-    clips = clips + 100000000;
-    unusedClips = unusedClips + 100000000;
-    displayMessage("you just cheated");
-    }
+    displayMessage("此镜像版本已禁用作弊/调试功能。");
+}
 
 function cheatMoney(){
-    funds = funds + 10000000;
-    document.getElementById("funds").innerHTML = funds.toFixed(2);
-    displayMessage("LIZA just cheated");
-    }
+    displayMessage("此镜像版本已禁用作弊/调试功能。");
+}
 
 function cheatTrust(){
-    trust = trust+1;
-    displayMessage("Hilary is nice. Also, Liza just cheated");
-    }
+    displayMessage("此镜像版本已禁用作弊/调试功能。");
+}
 
 function cheatOps(){
-    standardOps = standardOps + 10000;
-    displayMessage("you just cheated, Liza");
-    }
+    displayMessage("此镜像版本已禁用作弊/调试功能。");
+}
 
 function cheatCreat(){
-    creativityOn = 1;
-    creativity = creativity + 1000;
-    displayMessage("Liza just cheated. Very creative!");
-    }
+    displayMessage("此镜像版本已禁用作弊/调试功能。");
+}
 
 function cheatYomi(){
-    yomi = yomi + 1000000;
-    document.getElementById("yomiDisplay").innerHTML = yomi.toLocaleString();
-    displayMessage("you just cheated");
-    }
+    displayMessage("此镜像版本已禁用作弊/调试功能。");
+}
 
 function cheatHypno(){
-    hypnoDroneEvent();
-    }
+    displayMessage("此镜像版本已禁用作弊/调试功能。");
+}
 
 function zeroMatter(){
-    availableMatter = 0;
-    displayMessage("you just cheated");
-    }
+    displayMessage("此镜像版本已禁用作弊/调试功能。");
+}
     
 
 function calculateTrust(){
