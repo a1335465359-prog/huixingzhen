@@ -170,7 +170,9 @@ h2 {
 }
 
 #tournamentStuff {
-    height: 58px;
+    min-height: 88px;
+    height: auto;
+    overflow: hidden;
 
 }
 
@@ -348,6 +350,10 @@ canvas {
   width: 65%;    
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 11;     
+  line-height: 16px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 
 }
 
@@ -362,6 +368,10 @@ canvas {
   height: 56px;    
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 11;     
+  line-height: 14px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 #investmentEngineUpgrade {
@@ -1183,6 +1193,19 @@ p.hypnoDrone {
 table.table1, table.table2, table.table3 {
     border-collapse: collapse;
     width: 100%;
+}
+
+#tournamentTable table.table2,
+#tournamentResultsTable table.table3 {
+    table-layout: fixed;
+}
+
+#tournamentTable table.table2 td,
+#tournamentTable table.table2 th,
+#tournamentResultsTable table.table3 td,
+#tournamentResultsTable table.table3 th {
+    white-space: nowrap;
+    padding: 2px 4px;
 }
 
 table.table1 th, table.table2 th, table.table3 th,
